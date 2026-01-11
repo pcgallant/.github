@@ -1,0 +1,68 @@
+name: "User Story"
+description: "Add an artist or programmer's task to the project."
+title: "Story: "
+type: Task
+projects: ["CRB-GDI/42"]
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Provide the user story details below."
+  
+  - type: input
+    id: storyName
+    attributes:
+      label: "Story Title"
+      description: "Provide a brief title for this user story"
+      placeholder: "ex. Player Health UI"
+            
+  - type: dropdown
+    id: userSelection
+    attributes:
+      label: "As a..."
+      options:
+        - "player"
+        - "expert player"
+        - "beginner player"
+        - "enemy character"
+        - "WebGL player"
+        - "Windows player"
+        - "Other not listed (enter below)"
+        
+  - type: input
+    id: freeformUser
+    attributes:
+      label: "Other user/persona type (optional)"
+      description: "Must provide player/persona here if you selected **Other not listed** above."
+      placeholder: "ex. player" 
+    validations:
+      required: false
+
+  - type: input
+    id: what
+    attributes:
+      label: "I want to..."
+      description: "Complete the phrase to describe what the user will see without getting bogged down in implementation details"
+      placeholder: "ex. be able to see my health status at all times"
+
+  - type: input
+    id: why
+    attributes:
+      label: "So I can..."
+      description: "Complete the phrase explaining why this is important to the user"
+      placeholder: "ex. know if I need to heal before I battle the next enemy"
+
+  - type: markdown
+    attributes:
+      value: "## Validation test (optional)"
+  - type: input
+    attributes:
+      label: "When I … (action)"
+      description: "Provide the test scenario, user behavior"
+      placeholder: "ex. am playing in the level and take a hit"
+      
+  - type: input
+    attributes:
+      label: "This happens … (outcome)"
+      description: "Provide the expected result or outcome when that scenario executes or the user does the behavior"
+      placeholder: "ex. the health indicator is decreased"

@@ -1,0 +1,73 @@
+name: "Bug report (form)"
+description: "Report the bugs you find so we can continue to improve!"
+title: "BUG: "
+type: Bug
+# projects: ["gallant-lab/1"]
+
+body:
+  - type: markdown
+    attributes:
+      value: "## Provide the bug details below"
+
+  - type: dropdown
+    id: howTested
+    attributes:
+      label: "How did you test?"
+      options:
+        - "Unity Editor"
+        - "WebGL build & run from Unity Editor"
+        - "Windows build & run from Unity Editor"
+        - "WebGL build hosted in GitHub"
+        - "Windows build downloaded from GitHub"
+  
+  - type: textarea
+    id: versionTested
+    attributes:
+      label: "What version were you testing?"
+      description: "Provide either the branch and commit/pull request # OR the build version info that is applicable. Remove the ones that don't apply."
+      value: "Unity Editor - Branch name:               PR #:  \n WebGL Build - v##.##.##  \n Windows Build - v##.##.##"
+      
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: "What happened?"
+      description: "Provide a clear and concise description of what the bug is."
+      placeholder: "ex. Player health does not change when taking damage"
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: "How to reproduce the issue?"
+      description: "Provide detailed steps to reproduce the behavior."
+      placeholder: "Example: \n 1. From level 1 encountered the range enemy.  UI health showed 10 \n 2. Range enemy attack made contact with player. \n 3. Health UI still displayed 10."
+#      value: "1. Do this \n 2. Then do that \n 3. Then do the other"
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "What did you expect to happen?"
+      description: "Provide a clear and concise description of what you expected to happen."
+      placeholder: "Expected player's health to display as 9 after the hit."
+      
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "If applicable, attach screenshots or video clips below to help explain your problem.  Provide context for each attachement"
+      placeholder: "Ex. See attached screenshots of before and after"
+      
+  - type: dropdown
+    id: device
+    attributes:
+      label: "Testing device"
+      description: "What type of device were you using while testing?"
+      options:
+        - "Desktop"
+        - "Laptop"
+        - "Smartphone"
+
+  - type: textarea
+    id: deviceDetails
+    attributes:
+      label: "Please provide more details about your device"
+      description: "Having more details abour your device will help us troubleshoot."
+      value: "Device model [eg. iPhone13, Samsung Galaxy 7, Alienware, Chromebook]:  \n\n OS and version [e.g. Windows 11, iOS 12, Android 15]:  \n\n Browser [e.g. Chrome, Edge, etc] \n\n Version [e.g. 134.0.6998.3, 131.0.2903.86, etc]: \n\n"
